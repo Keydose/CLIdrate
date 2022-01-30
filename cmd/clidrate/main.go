@@ -36,9 +36,12 @@ func main() {
 
 	flag.Parse()
 
-	fmt.Fprintf(os.Stdout, "I'll remind you to hydrate by %dml every %d seconds\n", *hydrateAmountPtr, *hydrateIntervalPtr)
+	hydrateInterval := *hydrateIntervalPtr
+	hydrateAmount := *hydrateAmountPtr
 
-	go tick(*hydrateIntervalPtr, *hydrateAmountPtr)
+	fmt.Fprintf(os.Stdout, "I'll remind you to hydrate by %dml every %d seconds\n", hydrateAmount, hydrateInterval)
+
+	go tick(hydrateInterval, hydrateAmount)
 	select {}
 	// TODO: Unit test???
 
