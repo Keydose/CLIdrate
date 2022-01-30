@@ -11,7 +11,7 @@ import (
 
 func notify(hydrateAmount int) {
 	message := fmt.Sprintf("Drink %dml of water", hydrateAmount)
-	fmt.Println("Hydrate notification sent")
+	fmt.Println(message)
 	// TODO: Make the image smaller
 	beeep.Notify("Hydrate!", message, "../../assets/images/water-droplet.png")
 }
