@@ -36,7 +36,7 @@ func main() {
 
 	flag.Parse()
 
-	fmt.Fprintf(os.Stdout, "I'll remind you to hydrate by %dml every %d seconds", *hydrateAmountPtr, *hydrateIntervalPtr)
+	fmt.Fprintf(os.Stdout, "I'll remind you to hydrate by %dml every %d seconds\n", *hydrateAmountPtr, *hydrateIntervalPtr)
 
 	go tick(*hydrateIntervalPtr, *hydrateAmountPtr)
 	select {}
