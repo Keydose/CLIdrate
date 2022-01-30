@@ -43,8 +43,4 @@ func main() {
 
 	go tick(hydrateInterval, hydrateAmount)
 	select {}
-	// TODO: Unit test???
-
-	// TODO: Once passed interval, keep notifying every 30 seconds until
-	//   - The user confirms that they've hydrated in the CLI
 }
